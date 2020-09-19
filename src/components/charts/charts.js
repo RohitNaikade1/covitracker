@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {fetchDailyData} from '../../apis/index';
 import {Line, Bar} from 'react-chartjs-2';
-import styles from './charts.css';
+import {Container,Row,Col} from 'react-bootstrap';
 const Charts=({data:{confirmed,recovered,deaths},country})=>{
     const [dailyData,setDailyData]=useState([]);
     useEffect(() => {
@@ -67,12 +67,14 @@ const Charts=({data:{confirmed,recovered,deaths},country})=>{
         ): null
     );
     return (
-        <div className = {styles.container}>
+        <Container fluid>
+        <Row className="d-flex justify-content-md-center">
+            <Col md={10} xs={12}>
         {country?
             (country === "global" ? lineChart : barChart)
         : lineChart
-        }
-        </div>  
+        } 
+        </Col></Row></Container>
     )
 }
 
