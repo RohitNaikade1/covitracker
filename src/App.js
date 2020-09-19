@@ -26,36 +26,36 @@ class App extends React.Component {
         return (
             <>
             <Container>
-                <Row>
-                    <Col className="col-md-6 col-sm-8 col-xs-8">
+                <Row className="d-flex justify-content-md-center">
+                    <Col className="col-md-12">
                         <img src={coronaimage} alt="LOGO"></img> 
                     </Col>
                 </Row>                  
             </Container>
             <Container>
-            <Row>
+            <Row className="d-flex justify-content-md-center">
              <Col className="col-md-12">
                  <Cards data = {data}/>
              </Col>
              </Row>
             </Container>
             <Container>
-            <Row>
+            <Row className="d-flex justify-content-md-center">
              <Col className="col-md-12">
              <CountryPicker handleCountryChange= {this.handleCountryChange}/>
              </Col>
              </Row>
             </Container>
-            <Container>
-            <Row className="col-md-12">
-             <Col>
+            <Container fluid>
+            <Row className="d-flex justify-content-md-center">
+             <Col className="col-md-12">
               <Charts data = {data} country={country} />
              </Col>
              </Row>
             </Container>
             <Container fluid>
-            <Row className="col-md-12">
-             <Col>
+            <Row className="d-flex justify-content-md-center">
+             <Col className="col-md-12">
                 <Footer />
              </Col>
              </Row>
