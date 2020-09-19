@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container,Card,Row,Col} from 'react-bootstrap';
-import { CardContent,Typography, Grid } from '@material-ui/core'
+import {Typography} from '@material-ui/core'
 import CountUp from 'react-countup';
 import './cards.css'
 
